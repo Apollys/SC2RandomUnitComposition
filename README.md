@@ -13,3 +13,11 @@ If no tier 1 units exist are selected, a limited number of additional early game
 ![SC2UnitCompEx2](https://user-images.githubusercontent.com/37650759/114108153-5f313780-9887-11eb-862b-512fea606214.gif)
 
 Every output unit composition is guaranteed to be able to attack anything in the game.  For example, Oracle + Colossus would be automatically rejected as an invalid unit composition.  (I err on the side of safety in gray cases, so something like High Templar + Immortal would be rejected even though technically you could storm all air units, it's not reliable in practice.)
+
+Of course, human judgment supercedes simple algorithms, so if you get a ridiculous combination you can reroll with just two keypresses.
+
+Future refinements:
+ * Matchup-specific unit values - for example, Adepts are very strong in PvZ but quite weak in PvT, so a PvZ Adept could have value 6 while PvT adept has value 2-3.
+ * Weighted unit sampling - give increased probabilities of selecting spellcasters and interesting units, to avoid selections like Roach + Hydra.
+ * Tune the numbers - unit values and min/max composition values were just pulled off the top of my head for a proof of concept.
+ * Terran and Zerg unit values - I have only done Protoss so far as a proof of concept.
