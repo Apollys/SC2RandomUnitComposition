@@ -12,7 +12,7 @@ If no tier 1 units exist are selected, a limited number of additional early game
 
 ![SC2UnitCompEx2](https://user-images.githubusercontent.com/37650759/114108153-5f313780-9887-11eb-862b-512fea606214.gif)
 
-Every output unit composition is guaranteed to be able to attack anything in the game.  For example, Oracle + Colossus would be automatically rejected as an invalid unit composition.  (I err on the side of safety in gray cases, so something like High Templar + Immortal would be rejected even though technically you could storm all air units, it's not reliable in practice.)
+Every output unit composition is guaranteed to be able to attack anything in the game.  For example, Oracle + Colossus would be automatically rejected as an invalid unit composition.  (In grey areas, I err on the side of safety, so something like High Templar + Immortal would be rejected even though technically you could storm all air units, since it's not reliable in practice.)
 
 Of course, human judgment supercedes simple algorithms, so if you get a ridiculous combination you can reroll with just two keypresses.
 
