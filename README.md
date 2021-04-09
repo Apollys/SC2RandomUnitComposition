@@ -14,7 +14,11 @@ If no tier 1 units exist are selected, a limited number of additional early game
 
 Every output unit composition is guaranteed to be able to attack anything in the game.  For example, Oracle + Colossus would be automatically rejected as an invalid unit composition.  (In grey areas, I err on the side of safety, so something like High Templar + Immortal would be rejected even though technically you could storm all air units, since it's not reliable in practice.)
 
-Of course, human judgment supercedes simple algorithms, so if you get a ridiculous combination you can reroll with just two keypresses.
+---
+
+Of course, human judgment supercedes simple algorithms, so if you get a ridiculous combination you can always reroll with just two keypresses.
+
+---
 
 Future refinements:
  * Matchup-specific unit values - for example, Adepts are very strong in PvZ but quite weak in PvT, so a PvZ Adept could have value 6 while PvT adept has value 2-3.
