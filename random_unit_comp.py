@@ -36,7 +36,37 @@ kProtossUnits = [
     SC2Unit('Carrier', 8, 3, True, True)
 ]
 
-# TODO: Terran and Zerg units
+kTerranUnits = [
+    SC2Unit('Marine', 12, 1, True, True),
+    SC2Unit('Reaper', 4, 1, True, False),
+    SC2Unit('Marauder', 5, 1.5, True, False),
+    SC2Unit('Ghost', 6, 2, True, True),
+    SC2Unit('Hellion/Hellbat', 5, 2, True, False),
+    SC2Unit('Siege Tank', 7, 2, True, False),
+    SC2Unit('Widow Mine', 7, 2, True, True),
+    SC2Unit('Cyclone', 10, 2, True, True),
+    SC2Unit('Thor', 6, 2.5, True, True),
+    SC2Unit('Banshee', 4, 3, True, False),
+    # Note: Ravens are always allowed to be used as a detector,
+    # but abilities only allowed if the Raven is selected
+    SC2Unit('Raven', 4, 3, False, False),
+    SC2Unit('Liberator', 6, 3, True, True),
+    SC2Unit('Battlecruiser', 8, 3, True, True)
+]
+
+kZergUnits = [
+    SC2Unit('Zergling + Baneling', 6, 1, True, False),
+    SC2Unit('Roach + Ravager', 8, 1.5, True, False),
+    SC2Unit('Hydralisk', 6, 2, True, True),
+    SC2Unit('Lurker', 5, 2, True, False),
+    SC2Unit('Swarm Host', 3, 2, True, False),
+    SC2Unit('Mutalisk', 8, 2.5, True, True),
+    SC2Unit('Corruptor', 7, 2.5, False, True),
+    SC2Unit('Brood Lord', 5, 3, True, False),
+    SC2Unit('Ultralisk', 4, 3, True, False),
+    SC2Unit('Infestor', 4, 2, False, False),
+    SC2Unit('Viper', 6, 3, False, False)
+]
     
 
 # Generate a random unit combination with value in the given range
@@ -93,12 +123,13 @@ def main():
         while(units_list == []):
             print('\n------------------------------\n')
             race = input('Enter your race: ')
-            if (race.lower() == 't'):
-                print('Terran not yet implemented')
-            elif (race.lower() == 'p'):
+            race = race[0].lower()
+            if (race == 't'):
+                units_list = kTerranUnits
+            elif (race == 'p'):
                 units_list = kProtossUnits
-            elif (race.lower() == 'z'):
-                print('Zerg not yet implemented')
+            elif (race == 'z'):
+                units_list = kZergUnits
             else:
                 print('Please input either "t", "p", or "z"')
         print()
@@ -108,7 +139,10 @@ def main():
         for unit in unit_combination:
             print(unit.name, ' [', unit.value, '] ', sep='')
         if (not ContainsTier1Unit(unit_combination)):
-            print('+ 4 Tier 1(.5) units')
+            if (race == 'z'):
+                print('+ 6 Zerglings')
+            else:
+                print('+ 4 Tier 1(.5) units')
 
 
 if __name__ == '__main__':
