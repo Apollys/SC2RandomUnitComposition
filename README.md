@@ -25,7 +25,6 @@ Of course, human judgment supercedes simple algorithms, so if you get a ridiculo
 ---
 
 Future refinements:
+ * Weighted unit sampling - give increased probabilities of selecting spellcasters and interesting units, to avoid selections like Roach + Hydra.  Especially for zerg, this seems necessary to make interesting compositions.
  * Matchup-specific unit values - for example, Adepts are very strong in PvZ but quite weak in PvT, so a PvZ Adept could have value 6 while PvT adept has value 2-3.
- * Weighted unit sampling - give increased probabilities of selecting spellcasters and interesting units, to avoid selections like Roach + Hydra.
- * Tune the numbers - unit values and min/max composition values were just pulled off the top of my head for a proof of concept.
- * Terran and Zerg unit values - I have only done Protoss so far as a proof of concept.
+ * Tune the numbers - unit values and min/max composition values were just pulled off the top of my head for a proof of concept.  T/Z are especially unrefined.
